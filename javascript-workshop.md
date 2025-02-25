@@ -421,8 +421,56 @@ for (let i = 1; i <= 5; i++) {
 ### บันทึกผลการทดลอง 2.3
 ```html
 [บันทึกโค้ด ที่นี่]
+et number = 55; 
+
+    if (number % 2 === 0) {
+        console.log(number + " เป็นเลขคู่");
+    } else {
+        console.log(number + " เป็นเลขคี่");
+    }
+    
+ 
+    
+    console.log("ตารางสูตรคูณแม่ 2:");
+    for (let i = 1; i <= 12; i++) {
+        console.log("2 x " + i + " = " + (2 * i));
+    }
+    
+    
+    console.log("ตารางสูตรคูณแม่ 3:");
+    let j = 1;
+    while (j <= 12) {
+        console.log("3 x " + j + " = " + (3 * j));
+        j++;
+    }
+
+    
+    console.log("นับถอยหลังจาก 10 ถึง 1:");
+    for (let i = 10; i >= 1; i--) {
+        console.log(i);
+    }
+    
+    let age = 90;  
+    
+    if (age >= 0 && age <= 12) {
+        console.log("วัยเด็ก");
+    } else if (age >= 13 && age <= 19) {
+        console.log("วัยรุ่น");
+    } else if (age >= 20 && age <= 59) {
+        console.log("วัยผู้ใหญ่");
+    } else if (age >= 60) {
+        console.log("วัยผู้สูงอายุ");
+    } else {
+        console.log("อายุไม่ถูกต้อง");
+    }
 ```
 [รูปผลการทดลองที่ 2.3]
+
+![4](https://github.com/user-attachments/assets/9997f6be-7e40-4fb0-bcfd-e20421e5a7b6)
+
+![7](https://github.com/user-attachments/assets/90536d63-9d00-4528-83a7-d6c605640fc1)
+
+
 
 ### 2.4 Functions และ Arrow Functions
 
@@ -535,9 +583,58 @@ process(function() {
 ### บันทึกผลการทดลอง 2.4.1
 ```html
 [บันทึกโค้ด ที่นี่]
+function calculateBMI(weight, height) {
+        let bmi = weight / (height * height);  
+        
+        console.log("ค่า BMI: " + bmi.toFixed(2));  
+        
+        if (bmi < 18.5) {
+            console.log("น้ำหนักน้อยเกินไป");
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            console.log("น้ำหนักปกติ");
+        } else if (bmi >= 25 && bmi < 29.9) {
+            console.log("น้ำหนักเกิน");
+        } else {
+            console.log("อ้วน");
+        }
+    }
+    
+    
+    calculateBMI(55, 1.75); 
+    
+    function greetByAge(name, age) {
+        if (age < 13) {
+            console.log("สวัสดี " + name + " คุณยังเด็กมาก!");
+        } else if (age >= 13 && age <= 19) {
+            console.log("สวัสดี " + name + " คุณอยู่ในวัยรุ่น!");
+        } else if (age >= 20 && age <= 59) {
+            console.log("สวัสดี " + name + " คุณเป็นผู้ใหญ่แล้ว!");
+        } else {
+            console.log("สวัสดี " + name + " คุณอยู่ในวัยผู้สูงอายุ!");
+        }
+    }
+    
+    
+    greetByAge("น้องหญิง", 55);  
+    greetByAge("พี่ฟิล์ม", 75); 
+    greetByAge("หมูเด้ง", 95); 
+    
+    
+    function checkPassword(password) {
+        if (password.length > 8) {
+            console.log("รหัสผ่านมีความยาวมากกว่า 8 ตัวอักษร");
+        } else {
+            console.log("รหัสผ่านต้องมีความยาวมากกว่า 8 ตัวอักษร");
+        }
+    }
+    
+    
+    checkPassword("password123");
+    checkPassword("short");
 ```
 [รูปผลการทดลองที่ 2.4.1]
 
+![1](https://github.com/user-attachments/assets/9204dd0e-6cc9-4a77-8269-bb16d9c99c29)
 
 
 #### 2.4.2 Arrow Function
@@ -578,8 +675,59 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 ### บันทึกผลการทดลอง 2.4.2
 ```html
 [บันทึกโค้ด ที่นี่]
+function calculateBMI(weight, height) {
+        
+        let bmi = weight / (height * height);
+        
+        console.log("ค่า BMI: " + bmi.toFixed(2));  
+        
+        if (bmi < 18.5) {
+            console.log("น้ำหนักน้อยเกินไป");
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            console.log("น้ำหนักปกติ");
+        } else if (bmi >= 25 && bmi < 29.9) {
+            console.log("น้ำหนักเกิน");
+        } else {
+            console.log("อ้วน");
+        }
+    }
+    
+    
+    calculateBMI(45, 1.75); 
+    
+    
+    function greetByAge(name, age) {
+        if (age < 13) {
+            console.log("สวัสดี " + name + " คุณยังเด็กมาก!");
+        } else if (age >= 13 && age <= 19) {
+            console.log("สวัสดี " + name + " คุณอยู่ในวัยรุ่น!");
+        } else if (age >= 20 && age <= 59) {
+            console.log("สวัสดี " + name + " คุณเป็นผู้ใหญ่แล้ว!");
+        } else {
+            console.log("สวัสดี " + name + " คุณอยู่ในวัยผู้สูงอายุ!");
+        }
+    }
+    
+    greetByAge("หญิง", 65);  
+    greetByAge("พี่ฟิล์ม", 55); 
+    greetByAge("หมูเด้ง", 45); 
+    
+    
+    function checkPassword(password) {
+        if (password.length > 8) {
+            console.log("รหัสผ่านมีความยาวมากกว่า 8 ตัวอักษร");
+        } else {
+            console.log("รหัสผ่านต้องมีความยาวมากกว่า 8 ตัวอักษร");
+        }
+    }
+    
+    
+    checkPassword("password123"); 
+    checkPassword("short");
 ```
 [รูปผลการทดลองที่ 2.4.2]
+![1](https://github.com/user-attachments/assets/53a63c94-69a2-4689-a044-98c25c2866fb)
+
 
 
 ## การทดลองที่ 3 : การใช้ JavaScript กับ HTML และ CSS
@@ -648,8 +796,87 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 ### บันทึกผลการทดลอง 3.1
 ```html
 [บันทึกโค้ด ที่นี่]
+<h2>คำนวณค่า BMI (ดัชนีมวลกาย)</h2>
+
+
+<label for="weight">น้ำหนัก (kg): </label>
+
+<input type="number" id="weight" placeholder="กรอกน้ำหนัก" required>
+
+<br><br>
+
+
+<label for="height">ส่วนสูง (cm): </label>
+
+<input type="number" id="height" placeholder="กรอกส่วนสูง" required>
+
+<br><br>
+
+
+
+<button onclick="calculateBMI()">คำนวณ BMI</button>
+
+
+
+<h3>ผลลัพธ์:</h3>
+
+<p id="result"></p>
+
+
+
+<script>
+
+
+    const calculateBMI = () => {
+
+        let weight = parseFloat(document.getElementById("weight").value);
+
+        let height = parseFloat(document.getElementById("height").value) / 100; // แปลงเป็นเมตร
+
+
+
+        if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+
+            document.getElementById("result").innerHTML = "กรุณากรอกค่าน้ำหนักและส่วนสูงให้ถูกต้อง!";
+
+            return;
+
+        }
+
+
+
+        let bmi = weight / (height * height);
+
+        let status = "";
+
+
+
+        if (bmi < 18.5) {
+
+            status = "ผอม";
+
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+
+            status = "สมส่วน";
+
+        } else {
+
+            status = "อ้วน";
+
+        }
+
+
+
+        document.getElementById("result").innerHTML = `ค่าดัชนีมวลกาย (BMI): ${bmi.toFixed(2)} <br> สถานะ: ${status}`;
+
+    };
+
+</script>
 ```
 [รูปผลการทดลองที่ 3.1]
+
+<img width="1440" alt="ภาพถ่ายหน้าจอ 2568-02-25 เวลา 23 02 32" src="https://github.com/user-attachments/assets/01f754b1-759a-451a-aeb9-546d412ddd46" />
+
 
 ## การทดลองที่ 3.2 : การสร้างฟอร์มสำหรับจองห้องพัก
 การสร้างฟอร์มลงทะเบียนเพื่อรวบรวมข้อมูลที่จำเป็นสำหรับการจองห้องพัก
