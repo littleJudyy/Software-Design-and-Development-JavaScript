@@ -183,9 +183,36 @@ let person = {
 ### บันทึกผลการทดลอง 2.1
 ```html
 [บันทึกโค้ด ที่นี่]
+let studentId = "67030211";      
+let studentName = "วิชญาพร เนียมเที่ยง";     
+let midtermScore = 90;        
+let finalScore = 100;           
 
+const studentInfo = {
+    id: studentId,             
+    name: studentName,        
+    major: "ครุศาสตร์อุตสาหกรรมและเทคโนโลยี",  
+    gpa: 4.00                  
+};
+
+
+studentName = "วิชญาพร เนียมเที่ยง"; 
+
+
+console.log(studentInfo);
+console.log("รหัสนักศึกษา: " + studentInfo.id);
+console.log("ชื่อ: " + studentInfo.name);
+console.log("สาขาวิชา: " + studentInfo.major);
+console.log("เกรดเฉลี่ย: " + studentInfo.gpa);
+
+
+let totalScore = midtermScore + finalScore;
+console.log("คะแนนรวม: " + totalScore);
 ```
 [รูปผลการทดลองที่ 2.1]
+
+![3](https://github.com/user-attachments/assets/65313b9c-70f1-4c06-867f-fa8f91027344)
+
 
 
 ### 2.2 การดำเนินการทางคณิตศาสตร์
@@ -238,8 +265,31 @@ number /= 2;          // เท่ากับ number = number / 2
 ### บันทึกผลการทดลอง 2.2
 ```html
 [บันทึกโค้ด ที่นี่]
+let subject1 = 65;  
+    let subject2 = 84; 
+    let subject3 = 69;  
+    
+
+    let averageScore = (subject1 + subject2 + subject3) / 3;
+
+    console.log("คะแนนเฉลี่ยของนักศึกษา: " + averageScore);
+    
+
+    let productName = "macbook";
+    let productPrice = 25000; 
+
+    let vatRate = 0.07;  
+    let priceWithVAT = productPrice + (productPrice * vatRate);
+    
+    console.log("ชื่อสินค้า: " + productName);
+    console.log("ราคาสินค้า (ก่อน VAT): " + productPrice + " บาท");
+    console.log("ราคาสินค้าที่รวม VAT 7%: " + priceWithVAT + " บาท");
 ```
 [รูปผลการทดลองที่ 2.2]
+
+![2](https://github.com/user-attachments/assets/942ed9be-b64e-40f6-94d6-99217355e6d0)
+
+
 
 ### 2.3 การควบคุมการทำงาน
 
