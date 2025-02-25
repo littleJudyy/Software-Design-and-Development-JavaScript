@@ -77,8 +77,56 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
 ### บันทึกผลการทดลอง 
 ```html
 [บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ทดลอง JavaScript</title>
+</head>
+<body>
+    <!-- Inline JavaScript -->
+    <button onclick="alert('Witchayaporn Niemtieng')">ปุ่มที่ 1</button>
+
+    <!-- ทดสอบ Internal JavaScript -->
+    <button id="btn2">ปุ่มที่ 2</button>
+
+    <!-- ทดสอบ External JavaScript -->
+    <button id="btn3">ปุ่มที่ 3</button>
+
+    <!-- กล่องข้อความและปุ่มแสดงข้อความ -->
+    <input type="text" id="textBox" placeholder="พิมพ์ข้อความที่นี่">
+    <button onclick="showText()">แสดงข้อความ</button>
+    
+    <p id="output"></p>
+
+    <!-- Internal JavaScript -->
+    <script>
+        document.getElementById('btn2').onclick = function() {
+            alert('25/2/2568');
+        };
+
+        document.getElementById('btn3').onclick = function() {
+            alert('21.35');
+        };
+
+        function showText() {
+            let text = document.getElementById('textBox').value;
+            document.getElementById('output').innerText = text;
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
 ```
 [รูปผลการทดลองที่ 1]
+<img width="1440" alt="ภาพถ่ายหน้าจอ 2568-02-25 เวลา 21 49 56" src="https://github.com/user-attachments/assets/4a4a0610-5fa9-48ff-b246-7242e2ec6653" />
+
+<img width="1440" alt="ภาพถ่ายหน้าจอ 2568-02-25 เวลา 21 50 04" src="https://github.com/user-attachments/assets/6a330f87-34bb-46cd-9b3f-7649889e3e5b" />
+
+<img width="1440" alt="ภาพถ่ายหน้าจอ 2568-02-25 เวลา 21 50 10" src="https://github.com/user-attachments/assets/28f1d8ac-bd4f-4710-a836-0e4eeed51c5d" />
+
+
   
 ## การทดลองที่ 2: พื้นฐาน JavaScript
 ### 2.1 การประกาศตัวแปรและชนิดข้อมูล
@@ -135,6 +183,7 @@ let person = {
 ### บันทึกผลการทดลอง 2.1
 ```html
 [บันทึกโค้ด ที่นี่]
+
 ```
 [รูปผลการทดลองที่ 2.1]
 
