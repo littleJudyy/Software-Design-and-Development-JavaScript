@@ -1176,7 +1176,7 @@ function calculateBMI(weight, height) {
 ผลลัพธ์: ทำให้ขอบของ input ชัดเจนขึ้นเมื่อคลิกหรือเลือกใช้งาน เพิ่มความรู้สึกโต้ตอบกับฟอร์มได้ดีขึ้น
 
 [รูปผลการทดลองที่ 3.2.2]
-<img width="1440" alt="ภาพถ่ายหน้าจอ 2568-02-25 เวลา 23 02 32" src="https://github.com/user-attachments/assets/0928fe3f-dd4d-4447-8993-845dd6b27477" />
+<img width="1440" alt="ภาพถ่ายหน้าจอ 2568-02-25 เวลา 23 20 12" src="https://github.com/user-attachments/assets/ebf1c6d9-0c01-4306-8bdf-aec23c616453" />
 
 
 
